@@ -16,7 +16,9 @@ export default function AppNavigation() {
 
     const HomeTabs = () => {
         return (
-            <Tab.Navigator>
+            <Tab.Navigator
+              screenOptions={}
+            >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Chat" component={ChatScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
@@ -42,12 +44,12 @@ export default function AppNavigation() {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen 
           name="ChatDetails" 
-          component={HomeTabs} 
           component={ChatDetailsScreen}
           options={{
             presentation: 'modal'
           }}  
         />
+        <Stack.Screen name="HomeTabs" component={HomeTabs} />
       </Stack.Navigator>
     </NavigationContainer>
   )
